@@ -25,6 +25,7 @@ const HeroSection = () => {
                     <div className="max-w-md text-left">
                         <p className="text-base md:text-xl text-purple-200">
                             Soy estudiante de Ingeniería de Sistemas apasionado por la tecnología, el diseño limpio y la experiencia del usuario. Aquí te muestro lo que uso para construir sitios web modernos.
+
                         </p>
                     </div>
                 </div>
