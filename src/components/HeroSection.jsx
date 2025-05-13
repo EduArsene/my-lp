@@ -32,7 +32,7 @@ const HeroSection = () => {
                         </p>
                         {/*boton para descargar mi cv */}
                         <a href={fileUrl} className='' target="_blank">
-                            <div className='flex items-center justify-center border-purple-500 bg-slate-800 text-white hover:scale-110 hover:bg-gray-600 duration-300 h-10 w-44 rounded-full mt-6' >
+                            <div className='flex items-center justify-center bg-slate-800 text-white hover:scale-110 hover:bg-gray-700 duration-300 h-10 w-44 rounded-full mt-6 border-2 border-gray-300' >
                                 Descarga mi CV
                             </div>
                         </a>
@@ -40,7 +40,7 @@ const HeroSection = () => {
                         <BotonRedes />
                     </div>
                 </div>
-                <div className="bg-indigo-800 rounded-3xl p-8 md:p-10 text-white shadow-xl z-50 w-full md:w-[400px] h-auto md:h-[540px] static md:absolute md:-top-8 md:right-8 flex flex-col justify-center items-center drop-shadow-xl/50">
+                <div className="bg-gradient-to-br from-indigo-900 via-slate-900 to-indigo-900  rounded-3xl p-8 md:p-10 text-white shadow-xl z-50 w-full md:w-[400px] h-auto md:h-[540px] static md:absolute md:-top-8 md:right-8 flex flex-col justify-center items-center drop-shadow-xl/50">
 
                     <div className="relative w-auto h-auto mb-4 rounded-3xl overflow-hidden">
                         <img src={yo} alt="mi foto" className="w-full h-full object-cover rounded-3xl brightness-100" />
@@ -48,7 +48,7 @@ const HeroSection = () => {
                     </div>
                     <p className="text-base md:text-sm text-purple-200">
                         Tengo 24 años, soy de Perú y me gusta jugar futbol y salir a correr. En mis ratos libres me gusta aprender sobre tecnología y aplicarlo en distintos proyectos.
-                        Mi sueño es trabajar en el diseño Backend y Frontend.
+                        Mi sueño es trabajar como un desarrollador Full Stack.
                     </p>
 
                 </div>

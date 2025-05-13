@@ -1,98 +1,142 @@
-import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs, FaPython, FaJava, FaLeaf, FaBootstrap } from "react-icons/fa";
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-export default function ToolsSection() {
+import emailjs from 'emailjs-com';
+
+const ToolsSection = () => {
+  // Establecemos los estados para cada campo de formulario
+  const [name, setName] = useState('');
+  const [phone, setPhone] = useState('');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
+
+  // Establecemos estados para el control de la carga y mensajes de éxito/error
+  const [loading, setLoading] = useState(false);
+  const [success, setSuccess] = useState(false);
+  const [error, setError] = useState(false);
+
+  // Función para manejar el cambio de valores de los inputs
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    if (name === "name") setName(value);
+    if (name === "phone") setPhone(value);
+    if (name === "email") setEmail(value);
+    if (name === "message") setMessage(value);
+  };
+
+  // Función para manejar el envío del formulario
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    // Mostramos el estado de carga
+    setLoading(true);
+    setSuccess(false);
+    setError(false);
+
+    const formData = { name, phone, email, message };
+
+    try {
+      // Enviamos el formulario usando emailjs
+      const result = await emailjs.send(
+        'service_xu67z67',    
+        'template_r8akp5d',   
+        formData,             
+        'BULkGQMj4y2d5O2o0'   
+      );
+
+      console.log('Mensaje enviado:', result.text);
+      setSuccess(true);  // Establecemos el estado de éxito
+    } catch (error) {
+      // Si hubo error
+      console.error('Error al enviar el mensaje:', error);
+      setError(true);  // estado de error
+    } finally {
+      setLoading(false);  // finzalizacion del estado de carga
+    }
+  };
+
   return (
-    <motion.section id="">
-      <section className="min-h-screen w-full flex flex-col justify-center items-center px-6 py-20">
-        <h2 className="text-4xl font-bold text-center text-white mb-12 drop-shadow-sm">
-          Herramientas que utilizo
-        </h2>
+    <section id='contactame'
+      className="py-16  min-h-screen flex flex-col items-center">
+      {/* Animación solo en el título */}
+      <motion.h3
+        className="text-3xl font-bold font-mono mb-4 text-center text-white"
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+      >
+        Contactame
+      </motion.h3>
 
-        <div className="grid grid-cols-2 md:grid-cols-9 gap-10 justify-items-center">
-          {/* HTML5 */}
-          <div className="flex flex-col items-center transition-transform duration-300">
-            <FaHtml5 className="text-orange-500 text-6xl mb-2 drop-shadow-sm" />
-            <span className="text-white font-semibold">HTML5</span>
-          </div>
-
-          {/* CSS3 */}
-          <div className="flex flex-col items-center transition-transform duration-300">
-            <FaCss3Alt className="text-blue-400 text-6xl mb-2 drop-shadow-sm" />
-            <span className="text-white font-semibold">CSS3</span>
-          </div>
-
-          {/* JavaScript */}
-          <div className="flex flex-col items-center transition-transform duration-300">
-            <FaJs className="text-yellow-300 text-6xl mb-2 drop-shadow-sm" />
-            <span className="text-white font-semibold">JavaScript</span>
-          </div>
-
-          {/* React */}
-          <div className="flex flex-col items-center transition-transform duration-300">
-            <FaReact className="text-cyan-400 text-6xl mb-2 drop-shadow-sm" />
-            <span className="text-white font-semibold">React</span>
-          </div>
-
-          {/* Node.js */}
-          <div className="flex flex-col items-center transition-transform duration-300">
-            <FaNodeJs className="text-green-400 text-6xl mb-2 drop-shadow-sm" />
-            <span className="text-white font-semibold">Node.js</span>
-          </div>
-          {/* Python */}
-          <div className="flex flex-col items-center transition-transform duration-400">
-            <FaPython className="text-[#306998] text-6xl mb-2 drop-shadow-sm" />
-            <span className="text-white font-semibold">Python</span>
-          </div>
-          {/* Java*/}
-          <div className="flex flex-col items-center transition-transform duration-300">
-            <FaJava className="text-[#5382A1] text-6xl mb-2 drop-shadow-sm" />
-            <span className="text-white font-semibold">Java</span>
-          </div>
-          <div className="flex flex-col items-center transition-transform duration-300">
-            <FaLeaf className="text-[#6DB33F] text-6xl mb-2 drop-shadow-sm" />
-            <span className="text-white font-semibold">Spring Boot</span>
-          </div>
-          <div className="flex flex-col items-center transition-transform duration-300">
-            <FaBootstrap className="text-[#b82bbd] text-6xl mb-2 drop-shadow-sm" />
-            <span className="text-white font-semibold">Spring Boot</span>
-          </div>
+      <form
+        onSubmit={handleSubmit}
+        className="bg-slate-700/50 shadow-md rounded-lg px-10 py-3 w-full max-w-4xl"
+      >
+        <div className="mb-3">
+          <label className="block text-white">Nombres</label>
+          <input
+            placeholder='Nombres completos'
+            type="text"
+            name="name"
+            value={name}
+            onChange={handleChange}
+            required
+            className="w-full px-4  py-1 mt-2 border-2 border-blue-500/60 bg-slate-800/50 text-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+          />
         </div>
-        {/*
-import imgFotoChe from '../assets/img/experience/Foto-check.jpeg';
-import imgMar from '../assets/img/experience/mar.jpeg';
-import imgSunatDentro from '../assets/img/experience/Sunat-dentro.jpeg';
-import imgSunatfuera from '../assets/img/experience/Sunat-fuera.jpeg';
-const [currentImage, setCurrentImage] = useState(0);
 
-  const images = [
-    imgFotoChe,
-    imgMar,
-    imgSunatDentro,
-    imgSunatfuera,
-  ];
+        <div className="mb-3">
+          <label className="block text-white">Teléfono</label>
+          <input
+            placeholder='999999999'
+            type="text"
+            name="phone"
+            value={phone}
+            onChange={handleChange}
+            required
+            className="w-full px-4 py-2 mt-2 border-2 border-blue-500/60 bg-slate-800/50 text-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+          />
+        </div>
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentImage((prev) => (prev + 1) % images.length);
-    }, 3000);
+        <div className="mb-3">
+          <label className="block text-white">Correo Electrónico</label>
+          <input
+            placeholder='correo@correo.com'
+            type="email"
+            name="email"
+            value={email}
+            onChange={handleChange}
+            required
+            className="w-full px-4 py-2 mt-2 border-2 border-blue-500/60 bg-slate-800/50 text-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+          />
+        </div>
 
-    return () => clearInterval(interval);
-  }, []);
-  <div className="w-full max-w-sm md:max-w-md rounded-xl shadow-lg overflow-hidden">
-            <div className="relative w-full h-52">
-              {images.map((src, index) => (
-                <img
-                  key={index}
-                  src={src}
-                  alt={`Imagen ${index + 1}`}
-                  className={`absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-1000 ${index === currentImage ? "opacity-100" : "opacity-0"
-                    }`}
-                />
-              ))}
-            </div>
-          </div>*/}
+        <div className="mb-3">
+          <label className="block text-white">Mensaje</label>
+          <textarea
+            placeholder='Deja tu mensaje...'
+            name="message"
+            value={message}
+            onChange={handleChange}
+            required
+            rows="5"
+            className="w-full px-4 py-2 mt-2 border-2 border-blue-500/60 bg-slate-800/50  text-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+          ></textarea>
+        </div>
+        {/* boton de enviado */}
+        <button
+          type="submit"
+          className="w-full py-2 px-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+          disabled={loading}  // deshabilitar botonn
+        >
+          {loading ? 'Enviando...' : 'Enviar Mensaje'}
+        </button>
 
-      </section>
-    </motion.section>
+        {/* mensajes de estado de error o envio exitoso */}
+        {success && <p className="mt-4 text-green-600 font-mono font-bold">¡Mensaje enviado con éxito!</p>}
+        {error && <p className="mt-4 text-red-600 font-mono font-bold">Hubo un error al enviar el mensaje. Inténtalo nuevamente.</p>}
+      </form>
+    </section>
   );
-}
+};
+
+export default ToolsSection;
