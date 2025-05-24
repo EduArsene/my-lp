@@ -1,11 +1,19 @@
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
-import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs, FaPython, FaJava, FaLeaf, FaBootstrap } from "react-icons/fa";
-
+import {
+  FaHtml5,
+  FaCss3Alt,
+  FaJs,
+  FaReact,
+  FaNodeJs,
+  FaPython,
+  FaJava,
+  FaLeaf,
+  FaBootstrap,
+} from "react-icons/fa";
+import { SiFirebase, SiArduino, SiTailwindcss } from "react-icons/si";
 const AboutMeSection = () => {
   return (
-
-
     <motion.section
       className="min-h-screen w-full flex flex-col justify-center items-center  px-6 py-20"
       id="sobre-mi"
@@ -29,12 +37,16 @@ const AboutMeSection = () => {
           transition={{ duration: 0.8 }}
           className="origin-left mb-8 flex space-x-2 justify-center md:justify-start"
         >
-          <motion.ul initial={{ opacity: 0, x: -30 }}
+          <motion.ul
+            initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="flex-1 list-inside space-y-1  text-center md:text-left">
-            <li><div className="h-1 bg-white w-[500px] rounded-full"></div></li>
+            className="flex-1 list-inside space-y-1  text-center md:text-left"
+          >
+            <li>
+              <div className="h-1 bg-white w-[500px] rounded-full"></div>
+            </li>
           </motion.ul>
         </motion.div>
 
@@ -47,13 +59,14 @@ const AboutMeSection = () => {
             transition={{ duration: 0.8 }}
             className="flex-1 list-disc list-inside space-y-2 text-center md:text-left bg-indigo-950 p-5 border-4 border-blue-500/60 rounded-3xl"
           >
-            <span className='font-mono font-bold'>¿Quién soy?</span>
+            <span className="font-mono font-bold">¿Quién soy?</span>
             <div className="h-1 bg-white w-[325px] rounded-full"></div>
-            <p className='text-sm'>
-              Estudiante de décimo ciclo de la carrea de Ingenieria de Sistemas Computacionales. con una gran pasión
-              por la tecnología y todo lo relacionado con la creación de soluciones digitales. Me encanta aprender
-              nuevas herramientas y lenguajes de programación, siempre buscando formas de hacer las cosas de manera
-              más eficiente
+            <p className="text-sm">
+              Estudiante de décimo ciclo de la carrea de Ingenieria de Sistemas
+              Computacionales. con una gran pasión por la tecnología y todo lo
+              relacionado con la creación de soluciones digitales. Me encanta
+              aprender nuevas herramientas y lenguajes de programación, siempre
+              buscando formas de hacer las cosas de manera más eficiente
             </p>
           </motion.ul>
           <motion.ul
@@ -63,13 +76,17 @@ const AboutMeSection = () => {
             transition={{ duration: 0.9 }}
             className="flex-1 list-disc list-inside space-y-2 text-center md:text-left bg-indigo-950 p-5 border-4 border-blue-500/60 rounded-3xl"
           >
-            <span className='font-mono font-bold'>¿Cuáles son mis objetivos?</span>
+            <span className="font-mono font-bold">
+              ¿Cuáles son mis objetivos?
+            </span>
             <div className="h-1 bg-white w-[325px] rounded-full"></div>
-            <p className='text-sm'>
-              Mi objetivo es seguir creciendo como profesional, aprendiendo constantemente sobre nuevas tecnologías
-              y tendencias del sector. Me interesa mucho todo lo relacionado con desarrollo web, programación y
-              optimización de procesos. Busco trabajar en proyectos interesantes donde pueda aportar ideas y soluciones,
-              y seguir desarrollándome
+            <p className="text-sm">
+              Mi objetivo es seguir creciendo como profesional, aprendiendo
+              constantemente sobre nuevas tecnologías y tendencias del sector.
+              Me interesa mucho todo lo relacionado con desarrollo web,
+              programación y optimización de procesos. Busco trabajar en
+              proyectos interesantes donde pueda aportar ideas y soluciones, y
+              seguir desarrollándome
             </p>
           </motion.ul>
 
@@ -80,12 +97,15 @@ const AboutMeSection = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="flex-1 list-disc list-inside space-y-4 text-center md:text-left bg-indigo-950 p-5 border-4 border-blue-500/60 rounded-3xl"
           >
-            <span className='font-mono font-bold'>Mis características</span>
+            <span className="font-mono font-bold">Mis características</span>
             <div className="h-1 bg-white w-[325px] rounded-full"></div>
-            <p className='text-sm'>Me considero una persona curiosa, con una gran capacidad para aprender y enseñar. Soy
-              organizado y me gusta investigar sobre nuevas tecnologías, pero también soy flexible y me adapto
-              con facilidad a nuevos entornos. Disfruto de los desafíos y, sobre todo, de trabajar en equipo
-              para encontrar soluciones. </p>
+            <p className="text-sm">
+              Me considero una persona curiosa, con una gran capacidad para
+              aprender y enseñar. Soy organizado y me gusta investigar sobre
+              nuevas tecnologías, pero también soy flexible y me adapto con
+              facilidad a nuevos entornos. Disfruto de los desafíos y, sobre
+              todo, de trabajar en equipo para encontrar soluciones.{" "}
+            </p>
           </motion.ul>
         </div>
         {/*Iconos de las herramientas que uti*/}
@@ -101,7 +121,7 @@ const AboutMeSection = () => {
               Habilidades Técnicas
             </h2>
 
-            <div className="grid grid-cols-2 md:grid-cols-9 gap-10 justify-items-center">
+            <div className="grid grid-cols-2 md:grid-cols-10 gap-16 justify-items-center">
               {/* HTML5 */}
               <div className="flex flex-col items-center transition-transform duration-300">
                 <FaHtml5 className="text-orange-500 text-5xl  drop-shadow-sm" />
@@ -149,13 +169,15 @@ const AboutMeSection = () => {
                 <FaBootstrap className="text-[#b82bbd] text-5xl drop-shadow-sm" />
                 <span className="text-white font-semibold">Bootstrap</span>
               </div>
+              <div className="flex flex-col items-center transition-transform duration-300">
+                <SiFirebase className="text-yellow-500 text-5xl drop-shadow-sm" title="Firebase" />
+                <span className="text-white font-semibold">Firebase</span>
+              </div>
             </div>
           </div>
-
         </motion.div>
       </motion.div>
     </motion.section>
-
   );
 };
 
