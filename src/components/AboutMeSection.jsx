@@ -117,60 +117,60 @@ const AboutMeSection = () => {
           className="mt-8 bg-slate-700/50 p-6 sm:p-8 rounded-3xl flex flex-col md:flex-row items-center gap-6 w-full max-w-4xl mx-auto"
         >
           <div className="flex-1 text-white text-center md:text-left">
-            <h2 className="text-2xl font-mono font-bold text-center text-white mb-4 drop-shadow-sm">
+            <h2 className="text-2xl font-mono font-bold text-center text-white mb-4 drop-shadow-xs">
               Habilidades Técnicas
             </h2>
 
             <div className="grid grid-cols-2 md:grid-cols-10 gap-16 justify-items-center">
               {/* HTML5 */}
               <div className="flex flex-col items-center transition-transform duration-300">
-                <FaHtml5 className="text-orange-500 text-5xl  drop-shadow-sm" />
+                <FaHtml5 className="text-orange-500 text-5xl  drop-shadow-xs" />
                 <span className="text-white font-semibold">HTML5</span>
               </div>
 
               {/* CSS3 */}
               <div className="flex flex-col items-center transition-transform duration-300">
-                <FaCss3Alt className="text-blue-400 text-5xl  drop-shadow-sm" />
+                <FaCss3Alt className="text-blue-400 text-5xl  drop-shadow-xs" />
                 <span className="text-white font-semibold">CSS3</span>
               </div>
 
               {/* JavaScript */}
               <div className="flex flex-col items-center transition-transform duration-300">
-                <FaJs className="text-yellow-300 text-5xl drop-shadow-sm" />
+                <FaJs className="text-yellow-300 text-5xl drop-shadow-xs" />
                 <span className="text-white font-semibold">JavaScript</span>
               </div>
 
               {/* React */}
               <div className="flex flex-col items-center transition-transform duration-300">
-                <FaReact className="text-cyan-400 text-5xl drop-shadow-sm" />
+                <FaReact className="text-cyan-400 text-5xl drop-shadow-xs" />
                 <span className="text-white font-semibold">React</span>
               </div>
 
               {/* Node.js */}
               <div className="flex flex-col items-center transition-transform duration-300">
-                <FaNodeJs className="text-green-400 text-5xl drop-shadow-sm" />
+                <FaNodeJs className="text-green-400 text-5xl drop-shadow-xs" />
                 <span className="text-white font-semibold">Node.js</span>
               </div>
               {/* Python */}
               <div className="flex flex-col items-center transition-transform duration-400">
-                <FaPython className="text-[#306998] text-5xl drop-shadow-sm" />
+                <FaPython className="text-[#306998] text-5xl drop-shadow-xs" />
                 <span className="text-white font-semibold">Python</span>
               </div>
               {/* Java*/}
               <div className="flex flex-col items-center transition-transform duration-300">
-                <FaJava className="text-[#5382A1] text-5xl drop-shadow-sm" />
+                <FaJava className="text-[#5382A1] text-5xl drop-shadow-xs" />
                 <span className="text-white font-semibold">Java</span>
               </div>
               <div className="flex flex-col items-center transition-transform duration-300">
-                <FaLeaf className="text-[#6DB33F] text-5xl mx-32 drop-shadow-sm" />
+                <FaLeaf className="text-[#6DB33F] text-5xl mx-32 drop-shadow-xs" />
                 <span className="text-white font-semibold">Spring Boot</span>
               </div>
               <div className="flex flex-col items-center transition-transform duration-300">
-                <FaBootstrap className="text-[#b82bbd] text-5xl drop-shadow-sm" />
+                <FaBootstrap className="text-[#b82bbd] text-5xl drop-shadow-xs" />
                 <span className="text-white font-semibold">Bootstrap</span>
               </div>
               <div className="flex flex-col items-center transition-transform duration-300">
-                <SiFirebase className="text-yellow-500 text-5xl drop-shadow-sm" title="Firebase" />
+                <SiFirebase className="text-yellow-500 text-5xl drop-shadow-xs" title="Firebase" />
                 <span className="text-white font-semibold">Firebase</span>
               </div>
             </div>

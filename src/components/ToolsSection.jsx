@@ -80,7 +80,7 @@ const ToolsSection = () => {
             value={name}
             onChange={handleChange}
             required
-            className="w-full px-4  py-1 mt-2 border-2 border-blue-500/60 bg-slate-800/50 text-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full px-4  py-1 mt-2 border-2 border-blue-500/60 bg-slate-800/50 text-slate-200 rounded-lg focus:outline-hidden focus:ring-2 focus:ring-blue-500"
           />
         </div>
 
@@ -93,7 +93,7 @@ const ToolsSection = () => {
             value={phone}
             onChange={handleChange}
             required
-            className="w-full px-4 py-2 mt-2 border-2 border-blue-500/60 bg-slate-800/50 text-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full px-4 py-2 mt-2 border-2 border-blue-500/60 bg-slate-800/50 text-slate-200 rounded-lg focus:outline-hidden focus:ring-2 focus:ring-blue-500"
           />
         </div>
 
@@ -106,7 +106,7 @@ const ToolsSection = () => {
             value={email}
             onChange={handleChange}
             required
-            className="w-full px-4 py-2 mt-2 border-2 border-blue-500/60 bg-slate-800/50 text-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full px-4 py-2 mt-2 border-2 border-blue-500/60 bg-slate-800/50 text-slate-200 rounded-lg focus:outline-hidden focus:ring-2 focus:ring-blue-500"
           />
         </div>
 
@@ -119,7 +119,7 @@ const ToolsSection = () => {
             onChange={handleChange}
             required
             rows="5"
-            className="w-full px-4 py-2 mt-2 border-2 border-blue-500/60 bg-slate-800/50  text-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full px-4 py-2 mt-2 border-2 border-blue-500/60 bg-slate-800/50  text-slate-200 rounded-lg focus:outline-hidden focus:ring-2 focus:ring-blue-500"
           ></textarea>
         </div>
         {/* boton de enviado */}

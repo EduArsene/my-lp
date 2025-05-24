@@ -40,11 +40,11 @@ const HeroSection = () => {
                         <BotonRedes />
                     </div>
                 </div>
-                <div className="bg-gradient-to-br from-indigo-900 via-slate-900 to-indigo-900  rounded-3xl p-9 md:p-10 text-white shadow-xl z-50 w-full md:w-[400px] h-auto md:h-[540px] static md:absolute md:-top-8 md:right-8 flex flex-col justify-center items-center drop-shadow-xl/50">
+                <div className="bg-linear-to-br from-indigo-900 via-slate-900 to-indigo-900  rounded-3xl p-9 md:p-10 text-white shadow-xl z-50 w-full md:w-[400px] h-auto md:h-[540px] static md:absolute md:-top-8 md:right-8 flex flex-col justify-center items-center drop-shadow-xl/50">
 
                     <div className="relative w-auto h-auto mb-4 rounded-3xl overflow-hidden">
                         <img src={yo} alt="mi foto" className="w-full h-full object-cover rounded-3xl brightness-100 mask-radial-at-center mask-radial-from-50% mask-radial-to-70%" />
-                        <div className="absolute bottom-0 left-0 w-full h-1/4 bg-gradient-to-t from-indigo-800 to-transparent" />
+                        <div className="absolute bottom-0 left-0 w-full h-1/4 bg-linear-to-t from-indigo-800 to-transparent" />
                     </div>
                     <p className="text-base md:text-sm text-purple-200">
                         Tengo 24 años, soy de Perú y me gusta jugar futbol y salir a correr. En mis ratos libres me gusta aprender sobre tecnología y aplicarlo en distintos proyectos.

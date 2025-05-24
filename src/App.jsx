@@ -10,7 +10,7 @@ import Tools from './components/ToolsSection';
 
 const App = () => {
   return (
-      <div className="font-sans text-slate-900 bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900">
+      <div className="font-sans text-slate-900 bg-linear-to-br from-slate-900 via-indigo-900 to-slate-900">
         <Header />
         <HeroSection />
         <AboutMeSection />
