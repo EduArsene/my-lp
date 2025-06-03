@@ -1,4 +1,4 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 /*@tailwind base;
 @tailwind components;*/
 @tailwind utilities;
@@ -13,17 +13,24 @@
   }
 }
 
-body{
-    
+body {
+  font-family: system-ui, sans-serif; /* font-sans */
+  color: #0f172a; /* text-slate-900 */
+  background: linear-gradient(
+    to bottom right,
+    #0f172a,
+    #312e81,
+    #0f172a
+  ); /* bg-gradient */
 }
 .no-scrollbar::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
 .no-scrollbar {
-    -ms-overflow-style: none;  /* IE y Edge */
-    scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none; /* IE y Edge */
+  scrollbar-width: none; /* Firefox */
 }
 
 html {
-    scroll-behavior: smooth;
-  }
+  scroll-behavior: smooth;
+}

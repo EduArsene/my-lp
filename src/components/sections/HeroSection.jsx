@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
-import yo from "../assets/img/yo.png";
-import BotonRedes from "./Buttonn";
+import yo from "../../assets/img/yo.png";
+import BotonRedes from "../ui/Buttonn";
 const HeroSection = () => {
-  const fileUrl = "cv.pdf"; // Puede ser una URL de un archivo estático o un enlace a un servidor
+  const fileUrl = "cv.pdf";
 
   return (
     <motion.section
@@ -10,7 +10,7 @@ const HeroSection = () => {
       initial={{ opacity: 0, y: -50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 1 }}
-      className="min-h-screen w-full flex flex-col justify-center items-center px-6 py-20"
+      className="min-h-screen w-auto flex flex-col justify-center items-center px-6 py-20"
     >
       <div className="relative bg-purple-500/50 rounded-xl p-6 md:p-24 max-w-6xl w-full dark:bg-white-800 mx-auto mt-2 z-40 flex flex-col md:flex-row items-start space-y-8 md:space-y-0 md:space-x-8">
         <div className="flex-1 flex flex-col space-y-6 text-left">
@@ -39,7 +39,8 @@ const HeroSection = () => {
             <BotonRedes />
           </div>
         </div>
-        <div className="bg-linear-to-br from-indigo-900 via-slate-900 to-indigo-900  rounded-3xl p-9 md:p-10 text-white shadow-xl z-50 w-full md:w-[400px] h-auto md:h-[540px] static md:absolute md:-top-8 md:right-8 flex flex-col justify-center items-center drop-shadow-xl/50">
+        <div className="bg-linear-to-br from-indigo-900 via-slate-900 to-indigo-900  rounded-3xl p-9 md:p-10 text-white shadow-xl 
+        z-50 w-full md:w-[400px] h-auto md:h-[540px] static md:absolute md:-top-8 md:right-8 flex flex-col justify-center items-center drop-shadow-xl/50">
           <div className="relative w-auto h-auto mb-4 rounded-3xl overflow-hidden">
             <img
               src={yo}
@@ -48,9 +49,9 @@ const HeroSection = () => {
             />
           </div>
           <p className="text-base md:text-sm text-purple-200">
-            Tengo 24 años, soy de Perú y me gusta jugar futbol y salir a correr.
-            En mis ratos libres me gusta aprender sobre tecnología y aplicarlo
-            en distintos proyectos. Mi sueño es trabajar como un desarrollador
+            Tengo 24 años, soy de Perú y me gusta jugar fútbol y hacer ejercicio.
+            Me gusta aprender sobre tecnología y aplicarlo
+            en distintos proyectos personales y grupales. Mi sueño es trabajar como un desarrollador
             Full Stack.
           </p>
         </div>

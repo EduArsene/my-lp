@@ -60,7 +60,7 @@ const AboutMeSection = () => {
             className="flex-1 list-disc list-inside space-y-2 text-center md:text-left bg-indigo-950 p-5 border-4 border-blue-500/60 rounded-3xl"
           >
             <span className="font-mono font-bold">¿Quién soy?</span>
-            <div className="h-1 bg-white w-[325px] rounded-full"></div>
+            <div className="h-1 bg-white rounded-full w-3/4 mx-auto md:mx-0 md:w-1/2 lg:w-[325px]"></div>
             <p className="text-sm">
               Estudiante de décimo ciclo de la carrea de Ingenieria de Sistemas
               Computacionales. con una gran pasión por la tecnología y todo lo
@@ -79,7 +79,7 @@ const AboutMeSection = () => {
             <span className="font-mono font-bold">
               ¿Cuáles son mis objetivos?
             </span>
-            <div className="h-1 bg-white w-[325px] rounded-full"></div>
+            <div className="h-1 bg-white rounded-full w-3/4 sm:w-2/3 md:w-1/2 lg:w-[325px]"></div>
             <p className="text-sm">
               Mi objetivo es seguir creciendo como profesional, aprendiendo
               constantemente sobre nuevas tecnologías y tendencias del sector.
