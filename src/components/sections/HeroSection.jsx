@@ -6,13 +6,14 @@ const HeroSection = () => {
 
   return (
     <motion.section
-      id="Inicio"
+      id="inicio"
       initial={{ opacity: 0, y: -50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 1 }}
       className="min-h-screen w-auto flex flex-col justify-center items-center px-6 py-20"
     >
-      <div className="relative bg-purple-500/50 rounded-xl p-6 md:p-24 max-w-6xl w-full dark:bg-white-800 mx-auto mt-2 z-40 flex flex-col md:flex-row items-start space-y-8 md:space-y-0 md:space-x-8">
+      <div className="relative bg-purple-500/50 rounded-xl p-6 md:p-24 max-w-6xl w-full dark:bg-white-800 
+      mx-auto mt-2 z-40 flex flex-col md:flex-row items-start space-y-8 md:space-y-0 md:space-x-8">
         <div className="flex-1 flex flex-col space-y-6 text-left">
           <motion.h3
             initial={{ opacity: 0, y: 50 }}

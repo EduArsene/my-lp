@@ -40,3 +40,17 @@
 .read-the-docs {
   color: #888;
 }
+
+.logo {
+  
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 0.1em #646cffaa);
+  
+}
+
+.logo.react.asd:hover {
+  filter: drop-shadow(0 0 0.2em #61dafbaa);
+}

@@ -4,7 +4,7 @@ export default function Butonn() {
   const buttons = [
     {
       icon: <FaWhatsapp size={28} className="text-green-500"/>,
-      href: 'https://wa.me/sss' ,
+      href: 'https://wa.me/978713367' ,
       color: 'hover:bg-white ',
       corner: 'rounded-full ',
     },

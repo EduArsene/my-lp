@@ -14,7 +14,7 @@ const ToolsSection = () => {
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState(false);
 
-  // Función para manejar el cambio de valores de los inputs
+  // Funcion para manejar el cambio de valores de los inputs
   const handleChange = (e) => {
     const { name, value } = e.target;
     if (name === "name") setName(value);
@@ -23,7 +23,7 @@ const ToolsSection = () => {
     if (name === "message") setMessage(value);
   };
 
-  // Función para manejar el envío del formulario
+  // Funcion para manejar el envío del formulario
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -57,14 +57,14 @@ const ToolsSection = () => {
   return (
     <section id='contactame'
       className="py-16  min-h-screen flex flex-col items-center">
-      {/* Animación solo en el título */}
+      {/* Animacion solo en el título */}
       <motion.h3
         className="text-3xl font-bold font-mono mb-4 text-center text-white"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
       >
-        Contactame
+        Contáctame
       </motion.h3>
 
       <form
@@ -125,7 +125,9 @@ const ToolsSection = () => {
         {/* boton de enviado */}
         <button
           type="submit"
-          className="w-full py-2 px-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+          class="w-full text-slate-400 text-[20px] hover:text-blue-500 backdrop-blur-lg 
+          bg-gradient-to-tr from-transparent via-[rgba(136,136,136,0.16)] to-transparent 
+          rounded-tl-lg rounded-br-lg py-2 px-6 shadow hover:shadow-blue-500 duration-400"
           disabled={loading}  // deshabilitar botonn
         >
           {loading ? 'Enviando...' : 'Enviar Mensaje'}

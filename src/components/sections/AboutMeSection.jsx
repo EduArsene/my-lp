@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
 import {
   FaHtml5,
   FaCss3Alt,
@@ -123,8 +122,8 @@ const AboutMeSection = () => {
 
             <div className="grid grid-cols-2 md:grid-cols-10 gap-16 justify-items-center">
               {/* HTML5 */}
-              <div className="flex flex-col items-center transition-transform duration-300">
-                <FaHtml5 className="text-orange-500 text-5xl  drop-shadow-xs" />
+              <div className="flex flex-col items-center transition-transform duration-300 ">
+                <FaHtml5 className="text-orange-500 text-5xl drop-shadow-xs" />
                 <span className="text-white font-semibold">HTML5</span>
               </div>
 
