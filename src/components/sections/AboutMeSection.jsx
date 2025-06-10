@@ -1,16 +1,6 @@
 import { motion } from "framer-motion";
-import {
-  FaHtml5,
-  FaCss3Alt,
-  FaJs,
-  FaReact,
-  FaNodeJs,
-  FaPython,
-  FaJava,
-  FaLeaf,
-  FaBootstrap,
-} from "react-icons/fa";
-import { SiFirebase, SiArduino, SiTailwindcss } from "react-icons/si";
+import { IconItem } from "../ui/IconItem";
+
 const AboutMeSection = () => {
   return (
     <motion.section
@@ -29,7 +19,7 @@ const AboutMeSection = () => {
           Sobre mí
         </h3>
 
-        {/* Líneas decorativas */}
+        {/* Lineas decorativas */}
         <motion.div
           initial={{ scaleX: 0 }}
           animate={{ scaleX: 1 }}
@@ -103,10 +93,11 @@ const AboutMeSection = () => {
               aprender y enseñar. Soy organizado y me gusta investigar sobre
               nuevas tecnologías, pero también soy flexible y me adapto con
               facilidad a nuevos entornos. Disfruto de los desafíos y, sobre
-              todo, de trabajar en equipo para encontrar soluciones.{" "}
+              todo, de trabajar en equipo para encontrar soluciones.
             </p>
           </motion.ul>
         </div>
+        
         {/*Iconos de las herramientas que uti*/}
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
@@ -120,58 +111,18 @@ const AboutMeSection = () => {
               Habilidades Técnicas
             </h2>
 
-            <div className="grid grid-cols-2 md:grid-cols-10 gap-16 justify-items-center">
-              {/* HTML5 */}
-              <div className="flex flex-col items-center transition-transform duration-300 ">
-                <FaHtml5 className="text-orange-500 text-5xl drop-shadow-xs" />
-                <span className="text-white font-semibold">HTML5</span>
-              </div>
-
-              {/* CSS3 */}
-              <div className="flex flex-col items-center transition-transform duration-300">
-                <FaCss3Alt className="text-blue-400 text-5xl  drop-shadow-xs" />
-                <span className="text-white font-semibold">CSS3</span>
-              </div>
-
-              {/* JavaScript */}
-              <div className="flex flex-col items-center transition-transform duration-300">
-                <FaJs className="text-yellow-300 text-5xl drop-shadow-xs" />
-                <span className="text-white font-semibold">JavaScript</span>
-              </div>
-
-              {/* React */}
-              <div className="flex flex-col items-center transition-transform duration-300">
-                <FaReact className="text-cyan-400 text-5xl drop-shadow-xs" />
-                <span className="text-white font-semibold">React</span>
-              </div>
-
-              {/* Node.js */}
-              <div className="flex flex-col items-center transition-transform duration-300">
-                <FaNodeJs className="text-green-400 text-5xl drop-shadow-xs" />
-                <span className="text-white font-semibold">Node.js</span>
-              </div>
-              {/* Python */}
-              <div className="flex flex-col items-center transition-transform duration-400">
-                <FaPython className="text-[#306998] text-5xl drop-shadow-xs" />
-                <span className="text-white font-semibold">Python</span>
-              </div>
-              {/* Java*/}
-              <div className="flex flex-col items-center transition-transform duration-300">
-                <FaJava className="text-[#5382A1] text-5xl drop-shadow-xs" />
-                <span className="text-white font-semibold">Java</span>
-              </div>
-              <div className="flex flex-col items-center transition-transform duration-300">
-                <FaLeaf className="text-[#6DB33F] text-5xl mx-32 drop-shadow-xs" />
-                <span className="text-white font-semibold">Spring Boot</span>
-              </div>
-              <div className="flex flex-col items-center transition-transform duration-300">
-                <FaBootstrap className="text-[#b82bbd] text-5xl drop-shadow-xs" />
-                <span className="text-white font-semibold">Bootstrap</span>
-              </div>
-              <div className="flex flex-col items-center transition-transform duration-300">
-                <SiFirebase className="text-yellow-500 text-5xl drop-shadow-xs" title="Firebase" />
-                <span className="text-white font-semibold">Firebase</span>
-              </div>
+            <div className="grid grid-cols-2 md:grid-cols-7 gap-16 justify-items-center">
+              {IconItem.map((tech, index) => (
+                <div
+                  key={index}
+                  className="flex flex-col items-center transition-transform duration-300 hover:scale-105"
+                >
+                  <tech.icon
+                    className={`${tech.color} text-5xl drop-shadow-xs`}
+                  />
+                  <span className="text-white font-semibold">{tech.name}</span>
+                </div>
+              ))}
             </div>
           </div>
         </motion.div>

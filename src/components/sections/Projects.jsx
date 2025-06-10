@@ -10,7 +10,6 @@ import {
 } from "react-icons/fa";
 import { SiFirebase, SiArduino, SiTailwindcss } from "react-icons/si";
 import projects from "../Data/DataProjects";
-// Mapa con íconos existentes
 const toolIcons = {
   HTML: <FaHtml5 className="text-orange-600" title="HTML" />,
   CSS: <FaCss3Alt className="text-blue-600" title="CSS" />,

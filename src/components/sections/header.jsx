@@ -10,7 +10,7 @@ const Header = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ["Inicio", "Sobre mi", "Proyectos", "Contactame"];
+      const sections = ["Inicio", "Sobre mi","Experiencia", "Proyectos", "Contactame"];
       sections.forEach((section) => {
         const element = document.getElementById(section.replace(/\s+/g, "-").toLowerCase());
         if (element) {
@@ -30,14 +30,14 @@ const Header = () => {
   return (
     <header
       className="fixed top-0 left-0 w-full shadow-md z-50 font-[Roboto]
-      bg-gradient-to-br from-slate-900 via-indigo-900 to-indigo-900 transition-colors duration-300"
+      bg-gradient-to-br from-slate-950 via-indigo-950 to-indigo-900 transition-colors duration-300"
     >
       <div className="max-w-7xl mx-auto px-6 py-3 flex justify-between items-center text-white">
         <h1 className="text-xl max-md:text-[30px]"><a href="#">Portafolio | Eduardo AMV</a></h1>
 
         {/* Menu de navegacion */}
         <nav className="space-x-12 gap-16 max-md:hidden">
-          {["Inicio", "Sobre mi", "Proyectos", "Contactame"].map((section) => (
+          {["Inicio", "Sobre mi", "Experiencia","Proyectos", "Contactame"].map((section) => (
             <a
               key={section}
               href={`#${section.replace(/\s+/g, "-").toLowerCase()}`}
@@ -120,6 +120,13 @@ const Header = () => {
           onClick={() => setMenuOpen(false)}
         >
           Sobre mí
+        </a>
+        <a
+          href="#experiencia"
+          className="text-white text-2xl hover:text-purple-500"
+          onClick={() => setMenuOpen(false)}
+        >
+          Experiencia
         </a>
         <a
           href="#proyectos"

@@ -18,9 +18,9 @@ body {
   color: #0f172a; /* text-slate-900 */
   background: linear-gradient(
     to bottom right,
-    #0f172a,
-    #312e81,
-    #0f172a
+    #0b1120,
+    #1c1a4d,
+    #0b1120
   ); /* bg-gradient */
 }
 .no-scrollbar::-webkit-scrollbar {

@@ -4,6 +4,7 @@ import HeroSection from "./components/sections/HeroSection";
 import AboutMeSection from "./components/sections/AboutMeSection";
 import Projects from "./components/sections/Projects";
 import Contact from "./components/sections/ContanctMe";
+import Experience from "./components/sections/Experience";
 import { body } from "framer-motion/client";
 
 const App = () => {
@@ -14,8 +15,8 @@ const App = () => {
 
         <Header />
         <HeroSection />
-        
         <AboutMeSection />
+        <Experience/>
         <Projects />
         <Contact />
       </div>
