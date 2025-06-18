@@ -72,7 +72,7 @@ const ToolsSection = () => {
         className="bg-slate-700/50 shadow-md rounded-lg px-10 py-3 w-full max-w-4xl"
       >
         <div className="mb-3">
-          <label className="block text-white">Nombres</label>
+          <label className="block text-white text-left">Nombres</label>
           <input
             placeholder='Nombres completos'
             type="text"
@@ -85,7 +85,7 @@ const ToolsSection = () => {
         </div>
 
         <div className="mb-3">
-          <label className="block text-white">Teléfono</label>
+          <label className="block text-white text-left">Teléfono</label>
           <input
             placeholder='999999999'
             type="text"
@@ -98,7 +98,7 @@ const ToolsSection = () => {
         </div>
 
         <div className="mb-3">
-          <label className="block text-white">Correo Electrónico</label>
+          <label className="block text-white text-left">Correo Electrónico</label>
           <input
             placeholder='correo@correo.com'
             type="email"
@@ -111,7 +111,7 @@ const ToolsSection = () => {
         </div>
 
         <div className="mb-3">
-          <label className="block text-white">Mensaje</label>
+          <label className="block text-white text-left">Mensaje</label>
           <textarea
             placeholder='Deja tu mensaje...'
             name="message"
@@ -123,6 +123,7 @@ const ToolsSection = () => {
           ></textarea>
         </div>
         {/* boton de enviado */}
+        
         <button
           type="submit"
           class="w-full text-slate-400 text-[20px] hover:text-purple-400 backdrop-blur-lg 
@@ -134,8 +135,8 @@ const ToolsSection = () => {
         </button>
 
         {/* mensajes de estado de error o envio exitoso */}
-        {success && <p className="mt-4 text-green-600 font-mono font-bold">¡Mensaje enviado con éxito!</p>}
-        {error && <p className="mt-4 text-red-600 font-mono font-bold">Hubo un error al enviar el mensaje. Inténtalo nuevamente.</p>}
+        {success && <p className="mt-4 text-green-600 font-mono font-bold text-2xl">¡Mensaje enviado con éxito!</p>}
+        {error && <p className="mt-4 text-red-600 font-mono font-bold text-2xl">Hubo un error al enviar el mensaje. Inténtalo nuevamente.</p>}
       </form>
     </section>
   );

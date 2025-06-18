@@ -1,3 +1,5 @@
+import "../../App.css";
+
 import {
   FaHtml5,
   FaCss3Alt,
@@ -12,7 +14,7 @@ import {
 import { SiFirebase, SiArduino, SiTailwindcss, SiFigma } from "react-icons/si";
 
 export const IconItem = [
-  { icon: FaHtml5, name: "HTML5", color: "text-orange-500" },
+  { icon: FaHtml5, name: "HTML5", color: "text-orange-500 " },
   { icon: FaCss3Alt, name: "CSS3", color: "text-blue-400" },
   { icon: FaJs, name: "JavaScript", color: "text-yellow-300" },
   { icon: FaReact, name: "React", color: "text-cyan-400" },

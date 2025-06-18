@@ -5,8 +5,8 @@ import portfolioImg from "../../assets/img/experience/Foto-check.jpeg";
 import marImg from "../../assets/img/experience/mar.jpeg";
 import sunatDentro from "../../assets/img/experience/Sunat-dentro.jpeg";
 import sunatFuera from "../../assets/img/experience/sunat-fuera.jpeg";
-import { IconItem } from "../ui/IconItem";
-
+import ogcaImg from "../../assets/img/experience/ogca.jpeg";
+import { ImageItem } from "../Data/IconsSvg";
 const experiences = [
   {
     role: "Practicante Pre Profesional",
@@ -15,7 +15,7 @@ const experiences = [
     description:
       "Desarrollé herramientas de foliación utilizando Python para unir y foliar documentos, Figma para el diseño y prototipado de interfaces, y SQL para la ejecución de consultas en bases de datos. Además, utilicé tablas dinámicas, fórmulas avanzadas y macros en Excel para el ordenamiento y para la presentación eficiente de datos.",
     technologies: ["Python", "Excel", "Visual Basic", "Figma", "SQL"],
-    images: [portfolioImg, marImg, sunatDentro, sunatFuera],
+    images: [portfolioImg, marImg, sunatDentro, sunatFuera, ogcaImg],
   },
 ];
 
@@ -55,16 +55,34 @@ const Experience = () => {
                 <h4 className="font-semibold text-sm mt-4 mb-2 text-blue-300">
                   Tecnologías utilizadas:
                 </h4>
-                <ul className="list-disc list-inside text-sm text-white space-y-1 pl-2">
+
+                <div className="grid grid-cols-2 md:grid-cols-7 gap-16 justify-items-center">
+                  {ImageItem.map((tech, index) => (
+                    <div
+                      key={index}
+                      className="flex flex-col items-center transition-transform duration-300 hover:scale-105"
+                    >
+                      <img
+                        src={tech.image}
+                        alt={tech.name}
+                        className={`${tech.color} text-5xl drop-shadow-xs `}
+                      />
+                      <span className="text-white font-semibold">
+                        {tech.name}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+
+                {/*<ul className="list-disc list-inside text-sm text-white space-y-1 pl-2">
                   {exp.technologies.map((tech, i) => (
                     <li key={i}>{tech}</li>
                   ))}
-                </ul>
+                </ul> */}
               </div>
             </div>
-
             {/* Carrusel a la derecha */}
-            <div className="md:w-1/3 flex flex-col gap-6 items-center justify-center">
+            <div className="md:w-2/4 flex flex-col gap-6 items-center justify-center">
               {/* Carrusel de imágenes */}
               <Carousel
                 autoPlay
@@ -80,31 +98,11 @@ const Experience = () => {
                     <img
                       src={image}
                       alt={`Imagen ${i + 1} de ${exp.company}`}
-                      className="w-full h-64 object-cover rounded-xl border-2 border-slate-700"
+                      className="w-full h-80 object-cover rounded-xl border-2 border-slate-700"
                     />
                   </div>
                 ))}
               </Carousel>
-
-              {/* Íconos de tecnologías
-               <div className="flex flex-wrap gap-3 justify-center mt-4">
-                {IconItem.filter((iconObj) =>
-                  exp.technologies.includes(iconObj.name)
-                ).map((iconObj, i) => {
-                  const Icon = iconObj.icon;
-                  return (
-                    <div
-                      key={i}
-                      className="flex flex-col items-center text-center text-xs"
-                    >
-                      <Icon className={`text-3xl ${iconObj.color}`} />
-                      <span className="text-white mt-1">{iconObj.name}</span>
-                    </div>
-                  );
-                })}
-              </div>
-              */}
-             
             </div>
           </motion.div>
         ))}

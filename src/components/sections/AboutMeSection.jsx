@@ -97,7 +97,7 @@ const AboutMeSection = () => {
             </p>
           </motion.ul>
         </div>
-        
+
         {/*Iconos de las herramientas que uti*/}
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
@@ -113,15 +113,27 @@ const AboutMeSection = () => {
 
             <div className="grid grid-cols-2 md:grid-cols-7 gap-16 justify-items-center">
               {IconItem.map((tech, index) => (
-                <div
+                <motion.div
                   key={index}
                   className="flex flex-col items-center transition-transform duration-300 hover:scale-105"
+                  whileHover={{
+                    scale: 1.2, // Aumenta el tamaño al pasar el mouse
+                    rotate: 15, // Rotación ligera al hacer hover
+                    transition: {
+                      duration: 0.1,
+                      type: "spring",
+                      stiffness: 500,
+                      damping: 30,
+                    },
+                  }}
                 >
                   <tech.icon
                     className={`${tech.color} text-5xl drop-shadow-xs`}
                   />
-                  <span className="text-white font-semibold">{tech.name}</span>
-                </div>
+                  <span className="text-white font-semibold text-shadow- ">
+                    {tech.name}
+                  </span>
+                </motion.div>
               ))}
             </div>
           </div>

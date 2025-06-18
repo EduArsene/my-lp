@@ -33,7 +33,7 @@ const Header = () => {
       bg-gradient-to-br from-slate-950 via-indigo-950 to-indigo-900 transition-colors duration-300"
     >
       <div className="max-w-7xl mx-auto px-6 py-3 flex justify-between items-center text-white">
-        <h1 className="text-xl max-md:text-[30px]"><a href="#">Portafolio | Eduardo AMV</a></h1>
+        <h1 className="text-xl max-md:text-[20px]"><a href="#">Portafolio | Eduardo AMV</a></h1>
 
         {/* Menu de navegacion */}
         <nav className="space-x-12 gap-16 max-md:hidden">
