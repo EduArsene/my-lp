@@ -74,16 +74,12 @@ const Experience = () => {
                   ))}
                 </div>
 
-                {/*<ul className="list-disc list-inside text-sm text-white space-y-1 pl-2">
-                  {exp.technologies.map((tech, i) => (
-                    <li key={i}>{tech}</li>
-                  ))}
-                </ul> */}
+                
               </div>
             </div>
             {/* Carrusel a la derecha */}
-            <div className="md:w-2/4 flex flex-col gap-6 items-center justify-center">
-              {/* Carrusel de imágenes */}
+            <div className="md:w-2/4 flex flex-col gap-6 items-center justify-center ease-out">
+              {/* Carrusel de imagenes */}
               <Carousel
                 autoPlay
                 infiniteLoop
@@ -91,14 +87,14 @@ const Experience = () => {
                 showStatus={false}
                 interval={4000}
                 transitionTime={600}
-                className="rounded-lg overflow-hidden w-full"
+                className="rounded-lg overflow-hidden w-full cursor-none"
               >
                 {exp.images.map((image, i) => (
                   <div key={i}>
                     <img
                       src={image}
                       alt={`Imagen ${i + 1} de ${exp.company}`}
-                      className="w-full h-80 object-cover rounded-xl border-2 border-slate-700"
+                      className="w-full h-80 object-cover rounded-xl border-2 border-slate-700 cursor-none"
                     />
                   </div>
                 ))}

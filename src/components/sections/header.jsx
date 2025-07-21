@@ -33,7 +33,7 @@ const Header = () => {
       bg-gradient-to-br from-slate-950 via-indigo-950 to-indigo-900 transition-colors duration-300"
     >
       <div className="max-w-7xl mx-auto px-6 py-3 flex justify-between items-center text-white">
-        <h1 className="text-xl max-md:text-[20px]"><a href="#">Portafolio | Eduardo AMV</a></h1>
+        <h1 className="text-xl max-md:text-[20px]"><a href="#" className="cursor-none hover:scale-95">Portafolio | Eduardo AMV</a></h1>
 
         {/* Menu de navegacion */}
         <nav className="space-x-12 gap-16 max-md:hidden">
@@ -42,10 +42,10 @@ const Header = () => {
               key={section}
               href={`#${section.replace(/\s+/g, "-").toLowerCase()}`}
               onClick={() => setActiveSection(section)}
-              className={`relative p-3 transition-colors ${
+              className={`relative p-3 transition-colors cursor-none${
                 activeSection === section
-                  ? "text-purple-500 font-bold border-purple-500 rounded-b-2xl after:content-[''] after:absolute after:inset-2.5 after:border-[2px] after:border-purple-500 after:rounded-full after:animate-ping "
-                  : "hover:text-purple-500"
+                  ? "text-purple-500 font-bold border-purple-500 rounded-b-2xl after:content-[''] after:absolute after:inset-2.5 after:border-[2px] after:border-purple-500 after:rounded-full after:animate-ping cursor-none"
+                  : "hover:text-purple-500 cursor-none"
               }`}
             >
               {section}
@@ -55,8 +55,8 @@ const Header = () => {
       </div>
 
       {/* Animacion de la hamburguesa */}
-      <div className="flex items-center space-x-4 md:hidden absolute right-6 top-6">
-        <button onClick={toggleMenu} className="text-white">
+      <div className="flex items-center space-x-4 md:hidden absolute right-6 top-6 cursor-none">
+        <button onClick={toggleMenu} className="text-white cursor-none">
           <motion.div
             initial={{ rotate: 0 }}
             animate={{ rotate: menuOpen ? 45 : 0 }}
@@ -78,7 +78,7 @@ const Header = () => {
         </button>
       </div>
       <motion.div
-        className={`md:hidden absolute top-0 right-0 bg-gradient-to-br from-slate-900 via-indigo-900 to-indigo-900 w-60 h-80 flex flex-col items-center justify-center space-y-6 border-slate-900 rounded-b-2xl drop-shadow-xl/100 opacity-100 ${
+        className={`md:hidden absolute top-0 right-0 bg-gradient-to-br from-slate-900 via-indigo-900 to-indigo-900 w-60 h-80 flex flex-col items-center justify-center space-y-6 border-slate-900 rounded-b-2xl drop-shadow-xl/100 opacity-100 cursor-none ${
           menuOpen ? "block" : "hidden"
         }`}
         initial={{ opacity: 0 }}
@@ -86,12 +86,12 @@ const Header = () => {
         transition={{ duration: 0.3 }}
       >
         <div className="flex items-center space-x-4 md:hidden absolute right-6 top-6">
-          <button onClick={toggleMenu} className="text-white">
+          <button onClick={toggleMenu} className="text-white cursor-none">
             <motion.div
               initial={{ rotate: 0 }}
               animate={{ rotate: menuOpen ? 45 : 0 }}
               transition={{ duration: 0.3 }}
-              className="w-6 h-0.5 bg-white my-1"
+              className="w-6 h-0.5 bg-white my-1 "
             />
             <motion.div
               initial={{ opacity: 1 }}
@@ -109,35 +109,35 @@ const Header = () => {
         </div>
         <a
           href="#inicio"
-          className="text-white text-2xl hover:text-purple-500 "
+          className="text-white text-2xl hover:text-purple-500 cursor-none"
           onClick={() => setMenuOpen(false)}
         >
           Inicio
         </a>
         <a
           href="#sobre-mi"
-          className="text-white text-2xl hover:text-purple-500"
+          className="text-white text-2xl hover:text-purple-500 cursor-none"
           onClick={() => setMenuOpen(false)}
         >
           Sobre mí
         </a>
         <a
           href="#experiencia"
-          className="text-white text-2xl hover:text-purple-500"
+          className="text-white text-2xl hover:text-purple-500 cursor-none"
           onClick={() => setMenuOpen(false)}
         >
           Experiencia
         </a>
         <a
           href="#proyectos"
-          className="text-white text-2xl hover:text-purple-500"
+          className="text-white text-2xl hover:text-purple-500 cursor-none"
           onClick={() => setMenuOpen(false)}
         >
           Proyectos
         </a>
         <a
           href="#contactame"
-          className="text-white text-2xl hover:text-purple-500"
+          className="text-white text-2xl hover:text-purple-500 cursor-none"
           onClick={() => setMenuOpen(false)}
         >
           Contactame

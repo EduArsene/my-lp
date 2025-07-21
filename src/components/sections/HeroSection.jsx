@@ -4,10 +4,9 @@ import BotonRedes from "../ui/Buttonn";
 const HeroSection = () => {
   const fileUrl = "cv.pdf";
   const transition = {
-    duration: 0.4,
     type: "tween",
-  duration: 1,
-  ease: "easeInOut",
+    duration: 1,
+    ease: "easeInOut",
   };
   return (
     <motion.section
@@ -38,8 +37,8 @@ const HeroSection = () => {
               muestro lo que uso para construir sitios web modernos.
             </p>
             {/*boton para descargar mi cv */}
-            <a href={fileUrl} className="" target="_blank">
-              <div className="flex items-center justify-center bg-slate-800 text-white hover:scale-110 hover:bg-gray-700 duration-300 h-10 w-44 rounded-full mt-6 border-2 border-gray-300">
+            <a href={fileUrl} className="cursor-none" target="_blank">
+              <div className="flex items-center justify-center bg-slate-800 text-white hover:scale-110 hover:bg-gray-50 hover:text-slate-950 duration-300 h-10 w-44 rounded-full mt-6 border-2 border-gray-300">
                 Descarga mi CV
               </div>
             </a>
@@ -57,14 +56,14 @@ const HeroSection = () => {
             whileHover={{
               scale: 1.2, // Aumenta el tamaño al pasar el mouse
               transition: {
-                transition
+                transition,
               },
             }}
           >
             <img
               src={yo}
               alt="mi foto"
-              className="w-full h-full object-cover rounded-3xl brightness-100 mask-radial-at-center mask-radial-from-60% mask-radial-to-70%"
+              className="isolate  w-full h-full object-cover rounded-3xl brightness-100 mask-radial-at-center mask-radial-from-60% mask-radial-to-70%"
             />
           </motion.div>
           <p className="text-base md:text-sm text-purple-200">

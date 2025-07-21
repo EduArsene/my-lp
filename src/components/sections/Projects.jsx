@@ -35,7 +35,7 @@ export default function Projects() {
       <h2 className="text-4xl font-mono font-bold mb-10 text-center text-white  ">
         Proyectos
       </h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-6xl px-4 ">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-6xl px-4 cursor-none">
         {projects.map((project, index) => (
           <motion.a
             key={index}
@@ -47,7 +47,7 @@ export default function Projects() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.16, duration: 0.2 }}
-            className="shadow-md rounded-lg p-6 cursor-pointer hover:shadow-xl transition-shadow 
+            className="shadow-md rounded-lg p-6 cursor-none hover:shadow-xl transition-shadow 
                       border-2 border-blue-500/60 bg-slate-700/50 fill-white drop-shadow-xl/50 brightness-50 hover:brightness-90 "
           >
             <div className="mb-4 rounded-lg overflow-hidden w-full ">

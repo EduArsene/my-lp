@@ -24,7 +24,7 @@ export default function Butonn() {
   ];
 
   return (
-    <div className="grid grid-cols-3 grid-rows-1 w-60 h-12 gap-10 mt-5">
+    <div className="grid grid-cols-3 grid-rows-1 w-60 h-12 gap-10 mt-5 cursor-none">
       {buttons.map(({ icon, href, color, corner }, i) => (
         <a
           key={i}
@@ -32,7 +32,7 @@ export default function Butonn() {
           target="_blank"
           rel="noopener"
           className={`
-            flex items-center justify-center bg-slate-800 border-2 border-gray-300
+            flex items-center justify-center bg-slate-800 border-2 border-gray-300 cursor-none
             ${corner} transition-transform duration-200 shadow-lg
             ${color} hover:scale-110  
           `}

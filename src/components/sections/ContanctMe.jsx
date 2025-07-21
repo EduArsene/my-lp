@@ -126,9 +126,9 @@ const ToolsSection = () => {
         
         <button
           type="submit"
-          class="w-full text-slate-400 text-[20px] hover:text-purple-400 backdrop-blur-lg 
+          className="w-full text-slate-400 text-[20px] hover:text-purple-400 backdrop-blur-lg 
           bg-gradient-to-tr from-transparent via-[rgba(136,136,136,0.16)] to-transparent 
-          rounded-tl-lg rounded-br-lg py-2 px-6 shadow hover:shadow-purple-600 border-1 border-slate-600  duration-400"
+          rounded-tl-lg rounded-br-lg py-2 px-6 shadow hover:shadow-purple-600 border-1 border-slate-600  duration-400 cursor-none"
           disabled={loading}  // deshabilitar botonn
         >
           {loading ? 'Enviando...' : 'Enviar Mensaje'}
