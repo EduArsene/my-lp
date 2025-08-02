@@ -32,9 +32,9 @@ const HeroSection = () => {
           </motion.h3>
           <div className="max-w-md text-left">
             <p className="text-base md:text-xl text-purple-200">
-              Soy estudiante de Ingeniería de Sistemas apasionado por la
+              Soy egresado de Ingeniería de Sistemas, apasionado por la
               tecnología, el diseño limpio y la experiencia del usuario. Aquí te
-              muestro lo que uso para construir sitios web modernos.
+              muestro lo que uso para construir sitios web modernos...
             </p>
             {/*boton para descargar mi cv */}
             <a href={fileUrl} className="cursor-none" target="_blank">

@@ -113,7 +113,7 @@ const ToolsSection = () => {
             className="absolute left-4 top-1/2 transform -translate-y-1/2 text-slate-200
     peer-focus:top-0 peer-focus:text-purple-500 peer-focus:font-bold peer-valid:top-0 peer-valid:text-purple-500 transition-all"
           >
-            Número de Teléfono
+            Número de teléfono
           </label>
         </div>
 

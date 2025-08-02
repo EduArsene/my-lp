@@ -51,7 +51,7 @@ const AboutMeSection = () => {
             <span className="font-mono font-bold">¿Quién soy?</span>
             <div className="h-1 bg-white rounded-full w-3/4 mx-auto md:mx-0 md:w-1/2 lg:w-[325px]"></div>
             <p className="text-sm">
-              Estudiante de décimo ciclo de la carrea de Ingenieria de Sistemas
+              Egresado de la carrera de Ingenieria de Sistemas
               Computacionales. con una gran pasión por la tecnología y todo lo
               relacionado con la creación de soluciones digitales. Me encanta
               aprender nuevas herramientas y lenguajes de programación, siempre
