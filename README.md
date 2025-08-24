@@ -1,17 +1,48 @@
-<<<<<<< HEAD
-# React + Vite
+#   **My Portfolio – Eduardo Mariños Vergaray**
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Bienvenido a mi portafolio personal, una muestra de mi trabajo como desarrollador web. Este sitio fue creado con **React**, **TailwindCSS** y **Framer Motion**, combinando diseño moderno, animaciones fluidas y una estructura limpia para presentar quién soy y lo que hago.
 
-Currently, two official plugins are available:
+##  **Tecnologías utilizadas**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **React** – Librería para construir interfaces dinámicas y modulares.
+- **TailwindCSS** – Framework de estilos para un diseño responsivo y eficiente.
+- **Framer Motion** – Animaciones suaves y atractivas para mejorar la experiencia del usuario.
 
-## Expanding the ESLint configuration
+## 🌐 **Demo en vivo**
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-=======
-# lp-edu
-Landing page sobre mí. Experiencia, carrera, y algunos conocimientos
->>>>>>> b49801af61a4d8097028eba89f166453e4922ba5
+Puedes visitar el portafolio desplegado en GitHub Pages:  
+🔗 [eduarsene.github.io/my-lp](https://eduarsene.github.io/my-lp/)
+
+##  **Repositorio**
+
+El código fuente está disponible aquí:  
+🔗 [github.com/EduArsene/my-lp](https://github.com/EduArsene/my-lp)
+
+##  **Objetivo**
+
+Este proyecto busca reflejar mi identidad profesional como desarrollador Full Stack, destacando mis habilidades técnicas, mi enfoque visual y mi compromiso con la innovación. Es también una plataforma para compartir mis proyectos, intereses y evolución como profesional.
+
+##  **Características**
+
+- Diseño responsivo para múltiples dispositivos  
+- Animaciones interactivas con Framer Motion  
+- Código limpio y modular  
+- Secciones personalizadas para presentación profesional
+
+##  **Contacto**
+
+¿Te interesa colaborar o dar feedback?  
+Puedes encontrarme en [LinkedIn](https://www.linkedin.com/in/eduardo-anthonny-mariños-vergaray-a662072a3) o dejarme un mensaje en el repositorio.
+
+
+## **Despliegue local**
+
+Si descargas este proyecto se corre con:
+
+```bash
+  npm run deploy
+```
+
+---
+
+Gracias por visitar mi portafolio. ¡Estoy siempre abierto a nuevas ideas y oportunidades!
