@@ -37,10 +37,10 @@ Puedes encontrarme en [LinkedIn](https://www.linkedin.com/in/eduardo-anthonny-ma
 
 ## **Despliegue local**
 
-Si descargas este proyecto se corre con:
+Si descargas este proyecto se corre de manera local:
 
 ```bash
-  npm run deploy
+  npm run dev
 ```
 
 ---
